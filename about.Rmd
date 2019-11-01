@@ -1,0 +1,8 @@
+---
+title: "Resume"
+author: "Chuyue Xiang"
+date: "10/31/2019"
+output: html_document
+---
+
+<img src="images/resume.jpg" style="width:100%">
