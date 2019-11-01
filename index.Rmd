@@ -1,0 +1,22 @@
+---
+title: "Chuyue's Fancy Website"
+author: "Chuyue Xiang"
+date: "10/31/2019"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+    theme: cerulean
+---
+
+# Welcome to Chuyue's Website
+
+Hi, I'm Chuyue Xiang. You can call me Doris or Yueyue, whatever is easier for you.
+
+![](https://media.tenor.com/images/f506ad1e5b0bc81c2d63a2910a998c1c/tenor.gif)
+
+Let me introduce my favorite boys group to you: 
+
+## SEVENTEEN!!!
+
+![](https://img.kpopmap.com/2019/09/seventeen-official.jpg)
