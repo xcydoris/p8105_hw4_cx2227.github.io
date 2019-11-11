@@ -1,21 +1,18 @@
 ---
-title: "Interactive Graphics"
-author: "Chuyue Xiang"
-date: "10/31/2019"
+title: "Instacart Dashboard"
 output: 
-  html_document:
-    toc: true
-    toc_float: true
-    theme: cerulean
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: fill
 ---
 
-```{r}
+```{r setup, include=FALSE}
+library(flexdashboard)
 library(tidyverse)
 library(viridis)
 library(p8105.datasets)
 
 library(plotly)
-library(readr)
 ```
 
 ```{r}
@@ -43,6 +40,12 @@ common_department =
   select(department)
 ```
 
+
+Column {data-width=650}
+-----------------------------------------------------------------------
+
+### Scatter chart: Purchase time
+
 ```{r}
 inner_join(instacart, common_department, by="department") %>%
   mutate(text_label = str_c("Day of week: ", order_dow, 
@@ -52,15 +55,19 @@ inner_join(instacart, common_department, by="department") %>%
           color = ~department, text = ~text_label, colors = "Set2", alpha = 0.5)
 ```
 
+Column {data-width=350}
+-----------------------------------------------------------------------
 
+### Order of select department
 
 ```{r}
-  inner_join(instacart, common_department, by="department") %>%
+inner_join(instacart, common_department, by="department") %>%
   mutate(department = fct_reorder(department, add_to_cart_order)) %>%
   plot_ly(y = ~add_to_cart_order, color = ~department, type = "box", 
           colors = "Set2")
 ```
 
+### Number of purchase by department
 
 ```{r}
 instacart %>% 

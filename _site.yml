@@ -5,6 +5,8 @@ navbar:
   right:
     - text: "My Rusume"
       href: about.html
+    - text: "Dashboards"
+      href: dashboards.html
     - text: "Plotly"
       href: plotly.html
     - icon: fa-envelope fa-lg
